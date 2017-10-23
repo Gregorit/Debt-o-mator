@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+            <!-- Basic Page Needs -->
+            <meta charset="UTF-8">
+            <title>{% block title%}Debt-o-mator: Strona domowa{% endblock %}</title>
+            <meta name="description" content="">
+            <meta name="author" content="">
+
+            <!-- Mobile Specific Metas -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- FONT -->
+            <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+            <!-- CSS -->
+            <link rel="stylesheet" href="{% static 'accounts/css/normalize.css' %}">
+            <link rel="stylesheet" href="{% static 'accounts/css/skeleton-plus.css' %}">
+            <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+            <style>
+                table tr:nth-child(even) {
+                background-color: #B6B6B6;
+                }
+                table tr:nth-child(odd) {
+                background-color: #F1F1F1;
+                }
+                table th {
+                background-color: #d40000;
+                color: white;
+                }
+            </style>
+        </head>
+
+        <body>
+            {% block header %}
+            <div class="header">
+                <li><a href="{% url 'home' %}"><img src="{% static 'accounts/img/logo.png' %}"></a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'make-debt' %}">Create a debt</a></li>
+                <li><a href="{% url 'show' %}">Check debts</a></li>
+                <li class="right"><a href="{% url 'logout' %}">Log out</a></li>
+                <li class="right">Welcome: {{ request.user }}</li>
+                {% else %}
+                <li class="right"><a href="{% url 'login' %}">Log in</a></li>
+                {% endif %}
+            </div>
+            {% endblock %}
+            <div class="container">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+            <br>
+            <div class="footer">
+                <li>©2017 Gregorit</li>
+                <li class="right"><a href=#>FAQ</a></li>
+                <li class="right"><a href=#>Rules</a></li>
+                <li class="right"><a href=#>About</a></li>
+            </div>
+        </body>
+    </html>

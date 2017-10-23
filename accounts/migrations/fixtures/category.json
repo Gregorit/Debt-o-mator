@@ -1,0 +1,49 @@
+[
+  {
+    "model": "accounts.Category",
+    "pk": 1,
+    "fields": {
+      "category_name": "Food"
+    }
+  },
+
+  {
+    "model": "accounts.Category",
+    "pk": 2,
+    "fields": {
+      "category_name": "Alcohol"
+    }
+  },
+
+  {
+    "model": "accounts.Category",
+    "pk": 3,
+    "fields": {
+      "category_name": "Fuel"
+    }
+  },
+
+  {
+    "model": "accounts.Category",
+    "pk": 4,
+    "fields": {
+      "category_name": "Present"
+    }
+  },
+
+  {
+    "model": "accounts.Category",
+    "pk": 5,
+    "fields": {
+      "category_name": "Loan"
+    }
+  },
+
+  {
+    "model": "accounts.Category",
+    "pk": 6,
+    "fields": {
+      "category_name": "Other"
+    }
+  }
+]

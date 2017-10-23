@@ -1,0 +1,19 @@
+{% extends 'accounts/_base.html' %}
+{% load static %}
+{% block title %}Debt-o-mator: Debt creation{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="one-half column" style="margin-top: 10%">
+        <h3>Fill the debt form:</h3>
+        <ul>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="button button-primary" type="submit" value="Add debt"/>
+            </form>
+        </ul>
+        <a class="button button-normal" href="{% url 'home' %}">Return</a>
+    </div>
+</div>
+{% endblock %}

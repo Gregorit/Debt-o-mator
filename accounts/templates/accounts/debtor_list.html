@@ -1,0 +1,99 @@
+{% extends 'accounts/_base.html' %}
+{% load static %}
+{% block title %}Debt-o-mator: Debts list{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="one-half column" style="margin-top: 10%">
+        <h5>Debts list:</h5>
+        <ul>
+            <table>
+                <tr>
+                    <th>Debtor</th>
+                    <th>Whom to pay off?</th>
+                    <th>For what?</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th></th>
+                </tr>
+                {% for record in records %}
+                <tr>
+                    {% if record.in_debt == request.user or record.owes == request.user %}
+                    <td>{{ record.in_debt }} </td>
+                    <td>{{ record.owes }} </td>
+                    <td>{{ record.item_name }} </td>
+                    <td>{{ record.category }} </td>
+                    <td>{{ record.amount }} </td>
+
+                    {% if record.owes == request.user %}
+                    <td><a class="button button-danger" href="{% url 'delete' record.id %}">Delete</a></td>
+                    {% else %}
+                    <td></td>
+                    {% endif %}
+
+                    {% endif %}
+                </tr>
+                {% empty %}
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <br>
+        </ul>
+        <h5>Your total debt:</h5>
+        <ul>
+            <table>
+                <tr>
+                    <th>Debtor</th>
+                    <th>Total amount of debts</th>
+                </tr>
+                {% for in_debt, amount in dict.items %}
+                <tr>
+                    {% if in_debt == request.user %}
+                    <td>{{ in_debt }}</td>
+                    <td>{{ amount }}</td>
+                    {% endif %}
+                </tr>
+                {% empty %}
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </ul>
+        <br>
+        <h5>Your detailed debt:</h5>
+        <ul>
+            <table>
+                <tr>
+                    <th>Debtor</th>
+                    <th>Whom</th>
+                    <th>Total amount of debts</th>
+                </tr>
+                {% for row in dict_person %}
+                <tr>
+                    {% if row.in_debt == request.user %}
+                    <td>{{ row.in_debt }}</td>
+                    <td>{{ row.owes }}</td>
+                    <td>{{ row.amount }}</td>
+                    {% endif %}
+                </tr>
+                {% empty %}
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </ul>
+        <a class="button button-normal" href="{% url 'home' %}">Return</a>
+    </div>
+</div>
+{% endblock %}

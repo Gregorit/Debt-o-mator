@@ -1,0 +1,15 @@
+{% extends 'accounts/_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="one-half column" style="margin-top: 10%">
+        <h2>Debts management:</h2>
+        <a class="button button-primary" href="{% url 'make-debt' %}">Create a debt</a>
+        <br>
+        <br>
+        <a class="button button-normal" href="{% url 'show' %}">Check debts</a>
+    </div>
+</div>
+{% endblock %}

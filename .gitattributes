@@ -1,0 +1,2 @@
+accounts/static/* linguist-vendored
+accounts/migrations/fixtures/* linguist-vendored

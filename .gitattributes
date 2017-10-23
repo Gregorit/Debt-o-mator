@@ -1,2 +1,2 @@
-accounts/static/* linguist-vendored
+accounts/static/accounts/css/* linguist-vendored
 accounts/migrations/fixtures/* linguist-vendored

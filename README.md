@@ -43,7 +43,7 @@ You also need to create superuser/admin for using administration panel:
 $ python manage.py createsuperuser
 ```
 
-Finally we can start to run the server:
+Finally we can run the server:
 
 ```
 $ python manage.py runserver

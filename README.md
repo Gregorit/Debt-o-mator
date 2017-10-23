@@ -28,7 +28,7 @@ $ python manage.py makemigrations
 After that you need to do a migration. By that you will create a sqlite3 database:
 
 ```
-$ python manage.py makemigrations
+$ python manage.py migrate
 ```
 
 Next we need to import data from fixture to make categories available:
@@ -40,13 +40,13 @@ $ python manage.py loaddata accounts/migrations/fixtures/category.json
 You also need to create superuser/admin for using administration panel:
 
 ```
-$ python manage.py loaddata accounts/migrations/fixtures/category.json 
+$ python manage.py createsuperuser
 ```
 
 Finally we can start to run the server:
 
 ```
-$ python manage.py loaddata accounts/migrations/fixtures/category.json 
+$ python manage.py runserver
 ```
 
 

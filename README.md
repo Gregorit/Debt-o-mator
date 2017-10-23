@@ -1,6 +1,6 @@
 # Debt-o-mator
 
-Debt-o-mator is my first Python/Django project. It's used for managing debts of registered users.
+Debt-o-mator is my first Python 3/Django project. It's used for managing debts of registered users.
 It helps to control who is in debt and to which user the debtor needs to give money back.
 
 
@@ -94,5 +94,6 @@ Of cource only for users with superuser permissions. ;)
 
 * [Antergos 17.10](https://antergos.com) - System used to make this project
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE
+* [Python 3.6](https://www.python.org) - Python
 * [Django](https://www.djangoproject.com) - Python's framework for web development
 * [Skeleton-Plus](https://github.com/oldaniel/skeleton-plus) - boilerplate for changing site appearance

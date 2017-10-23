@@ -6,7 +6,7 @@ It helps to control who is in debt and to which user the debtor needs to give mo
 
 ## Prerequisites
 
-You need Python 3 installed (so obvious ;)) and Django framework.
+You need Python 3 installed (so obvious ;)) and Django framework.  
 How to get them?:
 
 ```
@@ -18,7 +18,7 @@ https://docs.djangoproject.com/en/1.11/topics/install/
 
 When you dowloaded a project, you need to go to main directory of project ("Debt-o-mator"). 
 
-After reaching that directory you need to use this command for making a migration.
+After reaching that directory you need to use this command for making a migration.  
 In our case:
 
 ```
@@ -86,7 +86,8 @@ Deleting a record is only available for person which appears in "Whom to pay off
 
 ### Administration panel (/admin)
 
-You can add/edit/delete debts, categories and users. Of cource only for users with superuser permissions. ;)
+You can add/edit/delete debts, categories and users.  
+Of cource only for users with superuser permissions. ;)
 
 
 ## Tools used to create this project

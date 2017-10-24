@@ -1,2 +1,2 @@
-accounts/static/accounts/css/* linguist-vendored
-accounts/migrations/fixtures/* linguist-vendored
+accounts/static/accounts/css/normalize.css linguist-vendored
+accounts/static/accounts/css/skeleton-plus.css linguist-vendored

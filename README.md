@@ -17,8 +17,8 @@ https://docs.djangoproject.com/en/1.11/topics/install/
 ### Setting up
 
 *These commands are based for Linux, but they can be same or similar when using other OS.*
-
-
+  
+  
 When you dowloaded a project, you need to go to main directory of project ("Debt-o-mator"). 
 
 After reaching that directory you need to use this command for making a migration.  

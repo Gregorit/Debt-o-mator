@@ -23,8 +23,10 @@ from .views import DebtorView, DebtorTotalListView, DebtorDeleteView, HomeView
 
 urlpatterns = [
     url(r'^admin', admin.site.urls),
-    url(r'^login', auth_views.login, {'template_name': 'accounts/login.html'}, name='login'),
-    url(r'^logout', auth_views.logout, {'template_name': 'accounts/logout.html'}, name='logout'),
+    url(r'^login', auth_views.login,
+        {'template_name': 'accounts/login.html'}, name='login'),
+    url(r'^logout', auth_views.logout,
+        {'template_name': 'accounts/logout.html'}, name='logout'),
     url(r'^signup', views.signup, name='signup'),
     url(r'^make-debt', DebtorView.as_view(), name='make-debt'),
     url(r'^show', DebtorTotalListView.as_view(), name='show'),

@@ -20,19 +20,35 @@ class DebtorTotalListView(TemplateView):
         dict_person = []
 
         for deb_x in Debtor.objects.all():
-            if {'in_debt': deb_x.in_debt, 'owes': deb_x.owes, 'amount': 0} not in dict_person:
-                dict_person.append({'in_debt': deb_x.in_debt, 'owes': deb_x.owes, 'amount': 0})
-            if {'in_debt': deb_x.owes, 'owes': deb_x.in_debt, 'amount': 0} not in dict_person:
-                dict_person.append({'in_debt': deb_x.owes, 'owes': deb_x.in_debt, 'amount': 0})
+            if {'in_debt': deb_x.in_debt,
+                'owes': deb_x.owes,
+                'amount': 0}\
+                    not in dict_person:
+                dict_person.append({'in_debt': deb_x.in_debt,
+                                    'owes': deb_x.owes,
+                                    'amount': 0})
+
+            if {'in_debt': deb_x.owes,
+                'owes': deb_x.in_debt,
+                'amount': 0}\
+                    not in dict_person:
+                dict_person.append({'in_debt': deb_x.owes,
+                                    'owes': deb_x.in_debt,
+                                    'amount': 0})
 
         for deb in Debtor.objects.all():
-            records.append({'id': deb.pk, 'in_debt': deb.in_debt, 'owes': deb.owes, 'item_name': deb.item_name,
-                            'category': deb.category, 'amount': deb.amount})
+            records.append({'id': deb.pk,
+                            'in_debt': deb.in_debt,
+                            'owes': deb.owes,
+                            'item_name': deb.item_name,
+                            'category': deb.category,
+                            'amount': deb.amount})
 
             if deb.in_debt in dict:
                 dict[deb.in_debt] += deb.amount
             else:
                 dict[deb.in_debt] = deb.amount
+
             if deb.owes in dict:
                 dict[deb.owes] -= deb.amount
             else:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.contrib.auth.views import redirect_to_login
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
@@ -8,7 +7,6 @@ def class_view_decorator(function_decorator):
     def simple_decorator(View):
         View.dispatch = method_decorator(function_decorator)(View.dispatch)
         return View
-
     return simple_decorator
 
 

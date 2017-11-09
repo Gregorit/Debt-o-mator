@@ -14,7 +14,9 @@ https://www.python.org/downloads/
 https://docs.djangoproject.com/en/1.11/topics/install/
 ```
 
-### Setting up (Linux)
+### Setting up
+
+*These commands are based for Linux, but they can be same or similar when using other OS.*
 
 When you dowloaded a project, you need to go to main directory of project ("Debt-o-mator"). 
 

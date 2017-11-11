@@ -87,11 +87,16 @@ It will show you all records connected with your username, total amount of debts
 Deleting a record is only available for person which appears in "Whom to pay off?".
 
 
-### Administration panel (/admin)
+### Administration panel
 
 You can add/edit/delete debts, categories and users.  
 Of cource only for users with superuser permissions. ;)
+  
+Administration panel is achievable at this link:
 
+```
+http://127.0.0.1:8000/admin
+```
 
 ## Tools used to create this project
 

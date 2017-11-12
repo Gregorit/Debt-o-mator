@@ -1,4 +1,5 @@
-# Debt-o-mator
+<p align="center"><img src ="https://imghost.io/images/2017/11/12/logo.png" /></p>
+
 
 Debt-o-mator is my first Python 3/Django project. It's used for managing debts of registered users.
 It helps to control who is in debt and to which user the debtor needs to give money back.
@@ -61,22 +62,22 @@ Default address to connect to the website:
 http://127.0.0.1:8000
 ```
 
-At the start when no one is logged in you can have access only for Log in or Sign up screen.
+At the start when no one is signed in you can have access only for Sign in or Sign up screen.
 
 
-### Log in
+### Sign in
 
 Simply put Username and Password of the existing user to the appropriate fields.
 
 
 ### Sign up
 
-If you are on Log in screen click Sign up button below. Fill up fields according to the instructions showed on screen.
+If you are on Sign in screen click Sign up button below. Fill up fields according to the instructions showed on screen.
 
 
 ### Creating a debt
 
-When you are logged in you have option to Create a debt and Check debts. Click Create a debt button.
+When you are signed in you have option to Create a debt and Check debts. Click Create a debt button.
 Choose who is a debtor, who should receive money, for what, category, amount and click Add debt.
 
 
@@ -98,7 +99,7 @@ Administration panel is achievable at this link:
 http://127.0.0.1:8000/admin
 ```
 
-## Tools used to create this project
+## Tools used in project
 
 * [Antergos 17.10](https://antergos.com) - System used to make this project
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE

@@ -6,7 +6,7 @@
         <head>
             <!-- Basic Page Needs -->
             <meta charset="UTF-8">
-            <title>{% block title%}Debt-o-mator: Strona domowa{% endblock %}</title>
+            <title>{% block title%}Debt-o-mator{% endblock %}</title>
             <meta name="description" content="">
             <meta name="author" content="">
 
@@ -41,10 +41,10 @@
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'make-debt' %}">Create a debt</a></li>
                 <li><a href="{% url 'show' %}">Check debts</a></li>
-                <li class="right"><a href="{% url 'logout' %}">Log out</a></li>
+                <li class="right"><a href="{% url 'logout' %}">Sign out</a></li>
                 <li class="right">Welcome: {{ request.user }}</li>
                 {% else %}
-                <li class="right"><a href="{% url 'login' %}">Log in</a></li>
+                <li class="right"><a href="{% url 'login' %}">Sign in</a></li>
                 {% endif %}
             </div>
             {% endblock %}

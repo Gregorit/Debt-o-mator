@@ -7,7 +7,7 @@ It helps to control who is in debt and to which user the debtor needs to give mo
 
 ## Prerequisites
 
-You need Python 3 installed (so obvious ;)) and Django framework.  
+You need Python 3 installed and Django framework.  
 How to get them?:
 
 ```

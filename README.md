@@ -1,8 +1,8 @@
 <p align="center"><img src ="https://imghost.io/images/2017/11/12/logo.png" /></p>
 
 
-Debt-o-mator is my first Python 3/Django project. It's used for managing debts of registered users.
-It helps to control who is in debt and to which user the debtor needs to give money back.
+*Debt-o-mator is my first Python 3/Django project. It's used for managing debts of registered users.
+It helps to control who is in debt and to which user the debtor needs to give money back.*
 
 
 ## Prerequisites
@@ -17,7 +17,7 @@ https://docs.djangoproject.com/en/1.11/topics/install/
 
 ### Setting up
 
-*These commands are based for Linux, but they can be same or similar when using other OS.*
+**These commands are based for Linux, but they can be same or similar when using other OS.**
   
   
 When you dowloaded a project, you need to go to main directory of project ("Debt-o-mator"). 

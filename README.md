@@ -32,7 +32,7 @@ $ python manage.py makemigrations
 After that you need to do a migration. By that you will create a sqlite3 database:
 
 ```
-$ python manage.py migrate
+$ python manage.py migrate --run-syncdb
 ```
 
 Next we need to import data from fixture to make categories available:
@@ -91,13 +91,21 @@ Deleting a record is only available for person which appears in "Whom to pay off
 ### Administration panel
 
 You can add/edit/delete debts, categories and users.  
-Of cource only for users with superuser permissions. ;)
+Of cource only for users with superuser permissions.
   
 Administration panel is achievable at this link:
 
 ```
 http://127.0.0.1:8000/admin
 ```
+
+## Screenshots
+
+![alt text](https://imghost.io/images/2017/12/02/ZrzutekranuDeepin_wybierz-obszar_20171202125112.png)
+![alt text](https://imghost.io/images/2017/12/02/ZrzutekranuDeepin_wybierz-obszar_20171202125402.png)
+![alt text](https://imghost.io/images/2017/12/02/ZrzutekranuDeepin_wybierz-obszar_20171202125439.png)
+![alt text](https://imghost.io/images/2017/12/02/ZrzutekranuDeepin_wybierz-obszar_20171202125921.png)
+![alt text](https://imghost.io/images/2017/12/02/ZrzutekranuDeepin_wybierz-obszar_20171202125953.png)
 
 ## Tools used in project
 
